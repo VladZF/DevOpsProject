@@ -1,20 +1,31 @@
-name: auto tests
+name: tests and lint
 
 on:
   push
 
 jobs:
-  test:
+  preparation:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: setup Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
-      - name: install pytest
-        run: pip install pytest
-      - name: launch tests
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Launch tests
         run: pytest
+  flake:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Launch flake
+        run: flake8

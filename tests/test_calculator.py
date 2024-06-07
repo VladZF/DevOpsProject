@@ -35,7 +35,7 @@ def test_mul(a, b, result):
 @pytest.mark.parametrize('a, b, result', [
     (1, 2, 0.5),
     (2, 1, 2),
-    (7, 0, 'Not defined'),
+    (7, 0, 'Не определено'),
     (0, 4, 0)
 ])
 def test_div(a, b, result):
@@ -45,7 +45,7 @@ def test_div(a, b, result):
 @pytest.mark.parametrize('a, b, result', [
     (1, 2, 0),
     (5, 2, 2),
-    (7, 0, 'Not defined'),
+    (7, 0, 'Не определено'),
     (0, 4, 0),
     (6, 3, 2),
     (11, 6, 1)
@@ -57,7 +57,7 @@ def test_int_div(a, b, result):
 @pytest.mark.parametrize('a, b, result', [
     (1, 2, 1),
     (15, 5, 0),
-    (7, 0, 'Not defined'),
+    (7, 0, 'Не определено'),
     (13, 10, 3),
     (21, 5, 1)
 ])

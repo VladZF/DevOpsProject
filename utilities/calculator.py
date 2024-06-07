@@ -12,7 +12,7 @@ class Calculator:
         try:
             return a / b
         except ZeroDivisionError:
-            return 'Not defined'
+            return 'Не определено'
 
     @staticmethod
     def mul(a, b):
@@ -23,11 +23,11 @@ class Calculator:
         try:
             return a // b
         except ZeroDivisionError:
-            return 'Not defined'
+            return 'Не определено'
 
     @staticmethod
     def rem(a, b):
         try:
             return a % b
         except ZeroDivisionError:
-            return 'Not defined'
+            return 'Не определено'
