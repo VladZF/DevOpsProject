@@ -31,3 +31,7 @@ class Calculator:
             return a % b
         except ZeroDivisionError:
             return 'Не определено'
+
+    @staticmethod
+    def pow(a, b):
+        return a ** b
