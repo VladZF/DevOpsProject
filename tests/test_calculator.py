@@ -1,5 +1,5 @@
 import pytest
-from calculator import Calculator
+from utilities.calculator import Calculator
 
 
 @pytest.mark.parametrize('a, b, result', [
