@@ -1,0 +1,20 @@
+name: auto tests
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - name: install pytest
+        run: pip install pytest
+      - name: launch tests
+        run: pytest
