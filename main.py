@@ -6,12 +6,13 @@ operations = {
     '/': Calculator.div,
     '//': Calculator.int_div,
     '%': Calculator.rem,
-    '*': Calculator.mul
+    '*': Calculator.mul,
+    '**': Calculator.pow
 }
 
 a = int(input('Введите первое число: '))
 b = int(input('Введите второе число: '))
-command = input('Введите операцию: +, -, /, //, %, *: ').strip()
+command = input('Введите операцию: +, -, /, //, %, *, **: ').strip()
 try:
     print(operations[command](a, b))
 except KeyError:
