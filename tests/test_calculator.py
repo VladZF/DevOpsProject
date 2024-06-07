@@ -64,6 +64,7 @@ def test_int_div(a, b, result):
 def test_rem(a, b, result):
     assert Calculator.rem(a, b) == result
 
+
 @pytest.mark.parametrize('a, b, result', [
     (1, 2, 1),
     (2, 10, 1024),
@@ -72,4 +73,3 @@ def test_rem(a, b, result):
 ])
 def test_pow(a, b, result):
     assert Calculator.pow(a, b) == result
-
