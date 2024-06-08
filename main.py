@@ -10,10 +10,14 @@ operations = {
     '**': Calculator.pow
 }
 
-a = int(input('Введите первое число: '))
-b = int(input('Введите второе число: '))
-command = input('Введите операцию: +, -, /, //, %, *, **: ').strip()
-try:
-    print(operations[command](a, b))
-except KeyError:
-    print('Некорректная команда')
+command = input('Введите операцию: +, -, /, //, %, *, **, exp: ').strip()
+if command == 'exp':
+    x = int(input('Введите показатель степени для e^x: '))
+    print(Calculator.exp(x))
+else:
+    a = int(input('Введите первое число: '))
+    b = int(input('Введите второе число: '))
+    try:
+        print(operations[command](a, b))
+    except KeyError:
+        print('Некорректная команда')
