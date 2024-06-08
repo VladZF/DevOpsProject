@@ -1,4 +1,5 @@
 class Calculator:
+
     @staticmethod
     def sum(a, b):
         return a + b
@@ -35,3 +36,7 @@ class Calculator:
     @staticmethod
     def pow(a, b):
         return a ** b
+
+    @staticmethod
+    def exp(x):
+        return 2.71 ** x

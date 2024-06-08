@@ -73,3 +73,8 @@ def test_rem(a, b, result):
 ])
 def test_pow(a, b, result):
     assert Calculator.pow(a, b) == result
+
+
+@pytest.mark.parametrize('x', (1, 2, 3, 4))
+def test_exp(x):
+    assert Calculator.exp(x) == 2.71 ** x
