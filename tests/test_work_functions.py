@@ -1,5 +1,5 @@
 import pytest
-from utilities.work_functions import *
+from utilities.work_functions import greeting, sort_array, find_element
 
 
 def test_greeting():
