@@ -23,11 +23,11 @@ def print_info():
 def math_operation():
     command = input('Введите операцию: +, -, /, //, %, *, **, exp: ').strip()
     if command == 'exp':
-        x = int(input('Введите показатель степени для e^x: '))
+        x = float(input('Введите показатель степени для e^x: '))
         print(Calculator.exp(x))
     else:
-        a = int(input('Введите первое число: '))
-        b = int(input('Введите второе число: '))
+        a = float(input('Введите первое число: '))
+        b = float(input('Введите второе число: '))
         try:
             print('Результат:', operations[command](a, b))
         except KeyError:
@@ -45,11 +45,11 @@ def main():
             name = input('Введите имя: ')
             print(greeting(name))
         elif op == 2:
-            arr = [int(x) for x in input('Введите массив: ').split()]
+            arr = [x for x in input('Введите массив: ').split()]
             print('Отсортированный массив:', *sort_array(arr))
         elif op == 3:
-            arr = [int(x) for x in input('Введите массив: ').split()]
-            target = int(input('Введите элемент, который нужно найти: '))
+            arr = [x for x in input('Введите массив: ').split()]
+            target = input('Введите элемент, который нужно найти: ')
             index = find_element(arr, target)
             if index == -1:
                 print('Искомого элемента нет в массиве')
