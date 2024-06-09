@@ -36,7 +36,10 @@ def math_operation():
 
 def main():
     print_info()
-    op = int(input('>>> '))
+    try:
+        op = int(input('>>> '))
+    except ValueError:
+        op = -1
     while op != 5:
         if op == 1:
             name = input('Введите имя: ')
@@ -56,7 +59,10 @@ def main():
             math_operation()
         else:
             print('Некорректная команда')
-        op = int(input('>>> '))
+        try:
+            op = int(input('>>> '))
+        except ValueError:
+            op = -1
 
 
 if __name__ == '__main__':
