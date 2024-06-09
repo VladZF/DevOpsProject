@@ -24,7 +24,7 @@ jobs:
     - name: Build binary
       run: pyinstaller --onefile main.py
     - name: Upload binary
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: binary
         path: dist/main
